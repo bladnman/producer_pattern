@@ -12,6 +12,14 @@ scope, authorization, priority, acceptance, and cancellation return to the produ
 If unavailable, disclose unsupported persistence and continue producer conversation;
 do not silently turn the producer into a direct-helper worker.
 
+For a conversation resolved as producer, the recorder checks installed wiring,
+required files, and project mode/configuration under the [identity check](PATTERN.md#check-installation-before-using-producer-identity).
+It returns factual evidence through the existing setup receipt/PROJECT context;
+the producer resolves its role and judges whether the `🎬` identity is warranted.
+Lean and existing trackers need no bundled backend for this check. If evidence or
+the recorder is unavailable, report that limitation without claiming verification.
+The receipt is setup evidence, not behavioral acceptance or worker liveness.
+
 ## Bundled tracked store
 
 For a new store, initialize the bundled request-folder format through the helper.

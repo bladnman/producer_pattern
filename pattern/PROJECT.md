@@ -12,6 +12,21 @@ Current activity/recovery pointer: [path; recorder-maintained]
 Important decisions: [path or canonical existing document]
 Required human acceptance/publication gates: [actual policy; unknown if unresolved]
 
+## Conversation startup check
+
+Recorder setup facts: [loaded startup entrypoint and installed pattern path;
+required files checked; configuration, mode, and canonical state; evidence or gaps]
+Producer's resolved current role: [actual user/parent assignment; producer or worker/reviewer/recorder]
+Current-conversation identity result: [checked producer + tracked/lean, or incomplete/unknown; reason]
+
+Resolve the assignment role first; only producer conversations need this check.
+Use a Small recorder for routine inspection, then the producer judges the receipt
+before using `🎬`; refresh when role/setup changes. The setup
+receipt may be compact and conversation-local; this is not a new registry or a
+requirement to rewrite PROJECT on every reply. Lean needs no bundled helper/config;
+an existing tracker stays canonical. Checked setup is not a successful behavioral
+trial or proof that any worker is alive.
+
 ## Host capability mapping
 
 Host and execution mechanisms: [actual available tools; restrictions]

@@ -1,6 +1,6 @@
 # Why the Producer Pattern has this shape
 
-Living design rationale · updated October 16, 2026. This repository authors a
+Living design rationale · updated October 17, 2026. This repository authors a
 candidate pattern; it has not automatically adopted or installed that pattern.
 This document explains the current reasoning, tradeoffs, and revisit triggers.
 It is not an activity log or a claim that every design direction is approved.
@@ -148,6 +148,37 @@ installation payload. Raw conversations and internal references remain private.
 **Revisit:** a boundary check reveals an external package dependency, accidental
 copying of authoring material, or unintended publication of private evidence.
 
+## R9 — Make attention and active supervision visible without decoration
+
+**Problem:** A real question or user-only action can disappear among progress
+updates. A polished update can also hide that supervision has stopped. A producer
+label can imply an installation that was never checked.
+**Accepted decision, October 17:** Use three semantic markers: `❓` for actionable
+user questions/decisions, `🖐️` for user-only actions, and `🎬` for producer identity
+after a current-conversation installation and role check. Other expressive emoji
+remain discretionary; special markers are sparse, not routine status decoration.
+**Why/tradeoff:** A small vocabulary makes attention needs recognizable. One marker
+can introduce several numbered questions. A checked identity exposes startup truth,
+while its limited meaning avoids implying tested behavior or live execution.
+**Consequence:** [PATTERN.md](../pattern/PATTERN.md) now defines the markers and
+requires compact situation reports while managed work continues: at most five
+minutes of silence, meaningful changes sooner, and stricter host cadence respected.
+Reports cover held work and current action/next proof, using actual observations.
+They remain intermediate commentary; existing handoff, blockage, and interruption
+boundaries still apply. A Small recorder returns setup facts under
+[STATE.md](../pattern/STATE.md); the producer resolves its actual role. The existing
+[PROJECT](../pattern/PROJECT.md) and [installation](../pattern/INSTALL.md) receipts
+supply the context without a new state engine or runtime requirement for lean or
+an existing tracker. These instructions are implemented in the documents; link and
+package checks do not establish fresh-session behavioral compliance.
+**Regression cases:** A source checkout or inherited worker cannot display producer
+identity. A correctly wired lean installation can pass without the bundled helper.
+With three workstreams, an active export, returned review, and waiting packaging
+all remain visible; the producer evaluates the review and keeps supervising after
+its report. User questions stay actionable, and a host question tool is not echoed
+as a second question in chat. **Revisit:** real use shows missed attention needs,
+noisy repetition, false setup claims, or supervision ending at a status report.
+
 ## Maintain this explanation
 
 At a material design choice, update the relevant topic rather than append every
@@ -174,3 +205,11 @@ pointers. Public documentation must stand on its own.
   flat-file design; host mappings and real adoption remain separate gates.
 - Established a public/private authoring boundary: generic rationale and tests are
   public; exact conversations and internal reference material are retained privately.
+
+## Decision history — October 17, 2026
+
+- Added sparse question, user-action, and checked producer-identity markers.
+- Added a bounded situation-report cadence with continued supervision; preserved
+  existing host, handoff, pause, and interruption boundaries.
+- Required current setup facts from the recorder and role resolution by the producer
+  before identity use, without claiming behavioral verification or worker liveness.

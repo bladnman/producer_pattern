@@ -40,7 +40,10 @@ not payload. A temporary staging clone is optional transport only.
    MODELS.md, and STATE.md inside `.producer/`. Workers/reviewers load their
    assignment and applicable project rules; recorders load STATE and its tracked
    references when applicable. Follow the requirements for your resolved role;
-   producer-only authority stays with producers.
+   producer-only authority stays with producers. Before a producer uses the 🎬
+   identity, have a Small recorder check this conversation's installed wiring,
+   required files, and project configuration/mode; the producer resolves its role
+   and judges the receipt under PATTERN's startup check. Other roles omit the badge.
    <!-- producer-pattern:end -->
    ```
 
@@ -83,9 +86,18 @@ in a newly created disposable directory, never by adding dummy actual requests:
    preserves exact raw text, expected history/revisions, and successful validation. Remove only the disposable fixture afterward. No external test suite
    or maintainer document is required for this check.
 
-Obtain a recorder setup receipt with paths and checks. Report installation
-separately from author approval or a successful fresh-session behavioral trial.
-Payload links are relative; fill PROJECT locally. Files do not start workers.
+Obtain a recorder setup receipt with the actual startup wiring, required files,
+project configuration/mode, and canonical state checked. Align PROJECT's startup
+fields with that evidence. Resolve each conversation's assignment role first. For
+a producer conversation, the recorder checks the current facts before the producer
+judges whether to show `🎬`; refresh after relevant changes. Other roles omit the
+badge without this check. Installation alone never makes an inherited worker
+a producer. Missing wiring/files, unknown mode, or an unavailable recorder leave
+the check incomplete; explain that plainly without a badge. Lean and existing
+trackers use their applicable setup without requiring a bundled helper or config.
+Report installation separately from author approval or a successful fresh-session
+behavioral trial. Payload links are relative; fill PROJECT locally. Files do not
+start workers, and the identity marker does not claim live supervision.
 
 ## Repeat, upgrade, remove
 

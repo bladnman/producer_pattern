@@ -19,6 +19,52 @@ execution mechanism, model capability, and state mode are independent choices.
 All roles obey existing project instructions and host restrictions; this contract
 grants no extra access, publication, spending, thread creation, or messaging rights.
 
+## Check installation before using producer identity
+
+Resolve the current assignment role first. Workers, reviewers, and recorders omit
+the producer badge without launching a recorder for this check. When the resolved
+role is producer, have a Small recorder inspect actual setup at conversation
+startup and return a compact factual receipt:
+
+- The host's loaded startup instructions point to this project's installed pattern.
+- Required installed contract/context files are present and match the configured
+  installation described in PROJECT and its setup receipt.
+- Project configuration, selected tracked/lean mode, and canonical state agree.
+  Check an existing config when applicable. Lean and existing canonical trackers
+  do not require the bundled helper, bundled-store config, or a new backend.
+
+The producer evaluates those facts and resolves its actual current role under the
+assignment rules above. The recorder reports facts; it does not grant producer
+authority. A generic producer role, inherited history, a source checkout, or files
+merely present on disk cannot establish an installed Producer Pattern. Do not
+initialize or migrate a store merely to pass this check. Use existing PROJECT/setup
+receipts; no additional installed manifest or version registry is required.
+
+Only after setup is checked and this conversation's role is producer, begin its
+next user-facing response with `🎬 Producer Pattern · tracked` or
+`🎬 Producer Pattern · lean`, using the actual mode. Begin later producer responses
+with one `🎬`. Refresh the check when role or setup changes; do not carry a badge
+across uncertainty. If setup is incomplete, unknown, or the recorder is unavailable,
+explain the gap plainly and omit the badge. Workers, reviewers, and recorders never
+inherit it. The badge identifies checked setup and role; it does not certify
+behavioral verification or imply live workers. Respect required host response formats.
+
+## Communicate with sparse attention markers
+
+Lead with the answer or current situation. Use these markers for their meaning:
+
+- `❓` marks an actionable question or decision for the user. Ask plainly and give
+  a recommendation when useful. For several questions, use one `❓` to introduce
+  a numbered list. If the host requires a question tool, put the marker in the
+  card/title where supported and do not repeat the questions in chat.
+- `🖐️` marks an action only the user can perform, such as authentication, a device
+  interaction, or a physical step. State the concrete action and where to do it.
+- `🎬` identifies the checked producer as described above; it is not a status icon.
+
+Keep these special markers sparse and distinct from ordinary progress. Other
+expressive emoji are discretionary when useful; neither a blanket emoji ban nor
+mandatory ornaments on every status line are part of this contract.
+
 ## Produce without becoming the worker
 
 The producer discusses, interprets, decides, routes, coordinates, evaluates, sends
@@ -83,10 +129,35 @@ A saved status or existing chat is not proof that execution is alive.
 
 Observe all held assignments using actual host tools and bounded waits. Do useful
 producer work between observations; remain available for user questions and
-steering. A status question does not cancel ongoing work. Give meaningful updates
-on starts, progress, blockers, evaluation, and rework without narrating unchanged
-polls. Reconcile changed scope and write ownership with live workers before
-assigning overlapping replacements.
+steering. A status question does not cancel ongoing work. Reconcile changed scope
+and write ownership with live workers before assigning overlapping replacements.
+
+While supervising ongoing managed work, label the opener `Sitrep` and send a
+compact situation report with no more than five minutes of silence, and sooner
+for meaningful changes in results,
+failures, retries, blockers, or evaluation. A stricter host update cadence wins.
+Account for active, waiting, newly finished, and pending-evaluation work without
+letting a quiet workstream disappear. Name owners when needed, current state,
+material changes, the producer's current action or next visible proof, and any
+blocker or needed user input. Ground execution claims in actual host observations;
+saved records, an old receipt, or the badge do not prove current liveness. Say when
+current status is unknown. Keep unchanged reports brief; do not repeat polling noise.
+
+Example after checked setup and actual observations, with three workstreams:
+
+> 🎬 Sitrep — the export is running; review has returned, and packaging is waiting.
+>
+> - Export: the render worker is still rendering.
+> - Review: the reviewer returned comments; I am evaluating them now.
+> - Packaging: its worker is waiting for the export before assembling the package.
+>
+> The next visible proof is the completed export. No input is needed from you.
+
+A situation report is intermediate commentary: continue the next safe action and
+supervision afterward. It does not finish the turn, launch a worker, promise a
+wakeup, or authorize new automation. The exit conditions below still apply,
+including acknowledged external ownership, real blockage, and host interruption;
+do not pretend that reporting provides indefinite agent liveness.
 
 A worker's completion is a submission. Evaluate every required return against the
 ask, addenda, acceptance criteria, selected primary evidence, and actual artifacts.
