@@ -4,6 +4,10 @@
 coordinates workers, evaluates evidence, and accepts the whole outcome. Workers
 execute; a small recorder preserves state. Tracked is default; lean is optional.
 
+**New here? [Start with the website](https://producer.metal-sole.com/)** for the
+overview and copyable requests to install, check, or update it through your
+project's existing agent. Website source and hosting notes live in [site/](site/).
+
 **Here to install? Start with [pattern/README.md](pattern/README.md).** That subtree
 stands alone. Install only its manifest-listed payload into the target project's
 `.producer/`; the rest of this repository is not part of the installation.

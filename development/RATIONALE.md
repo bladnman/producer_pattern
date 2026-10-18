@@ -227,6 +227,29 @@ identities at first use, never cloned initialized state or completed receipts.
 instructions; actual target catch-up and fresh-session trials need separate receipts.
 Revisit when a real update conflict exposes an insufficient preservation check.
 
+## R12 — Give people a readable front door without another contract layer
+
+**Accepted direction, October 17:** A public site at `producer.metal-sole.com`
+explains the producer/worker/recorder division and gives visitors copyable requests
+for their existing project agent to install, check, or explicitly update the pattern.
+GitHub's published package remains authoritative; the agent guide links to its
+current protocols instead of maintaining another installation implementation.
+**Why/tradeoff:** Repository contracts are precise but dense for a first visit.
+A short visual introduction makes the next action clear, while a separate summary
+can drift. Keep installation/status/update claims bounded and link their source.
+**Implemented:** [site/](../site/README.md) contains a static page and agent guide,
+a small HTML/Markdown negotiation Worker, and an explicit public build allowlist.
+It is outside the manifest-selected payload. Initial publication remains a separate
+gate until a deployment receipt verifies the intended domain. Local content and
+browser checks are not evidence of public availability or successful adoption.
+**Regression cases:** The install button copies an agent request, not an executable
+installer. The browser cannot declare the visitor's project installed. A displayed
+producer marker describes a checked setup/role, not running workers. Updates preserve
+adaptations and private state under [UPDATES.md](../pattern/references/UPDATES.md).
+The public build excludes project state, private sources, and maintainer archives.
+**Revisit:** Real visitors cannot find the next step, summary copy contradicts
+contracts, or a public build includes files beyond its explicit allowlist.
+
 ## Maintain this explanation
 
 At a material design choice, update the relevant topic rather than append every
@@ -265,3 +288,5 @@ pointers. Public documentation must stand on its own.
   and explicit role/scope/authority on every bounded delegated assignment.
 - Added pinned GitHub-source update instructions and private managed-file baselines;
   preserved project state, adapters, template identity boundaries, and explicit migration gates.
+- Added a public introduction outside the installable package, with copyable agent
+  requests and GitHub protocols remaining authoritative; publication is a separate gate.

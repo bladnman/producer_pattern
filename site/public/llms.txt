@@ -1,0 +1,12 @@
+# Producer Pattern
+
+One project producer coordinates workers, evaluates returns, and accepts the
+integrated outcome. A recorder preserves continuity. First candidate.
+
+- [Agent entrypoint](https://producer.metal-sole.com/install.md): installation, verification and explicit update requests; links to canonical protocols.
+- [Canonical package](https://github.com/bladnman/producer_pattern/blob/main/pattern/README.md): authoritative installation entrypoint.
+- [Update protocol](https://github.com/bladnman/producer_pattern/blob/main/pattern/references/UPDATES.md): preserve project adaptations and private state.
+- [Public rationale](https://github.com/bladnman/producer_pattern/blob/main/development/RATIONALE.md): reasons and tradeoffs.
+
+Reading is not adoption. Install/update only on an authorized request. Resolve
+published main to an exact reviewed commit; the current package controls.
