@@ -49,9 +49,21 @@ test('copyable requests agree between the human page and agent guide', async () 
   const requests = [...html.matchAll(/<code id="(?:install|verify|update)-request">([^<]+)<\/code>/g)].map(match => match[1]);
   assert.equal(requests.length, 3);
   for (const request of requests) assert.ok(guide.includes(`\n${request}\n`), request);
-  assert.equal(requests[0], 'Install the Producer Pattern in this project: https://github.com/bladnman/producer_pattern');
-  assert.equal(requests[2], 'Update the Producer Pattern in this project from https://github.com/bladnman/producer_pattern');
+  assert.equal(requests[0], 'Install the Producer Pattern in this project: https://producer.metal-sole.com');
+  assert.equal(requests[2], 'Update the Producer Pattern in this project from https://producer.metal-sole.com');
   for (const [, anchor] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(html.includes(`id="${anchor}"`), anchor);
+});
+
+test('the public front door exposes an agent guide that proceeds to canonical GitHub installation', async () => {
+  const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+  const guide = await readFile(new URL('../public/install.md', import.meta.url), 'utf8');
+  assert.match(html, /<nav[^>]*>[\s\S]*href="\/install\.md">For an agent<\/a>[\s\S]*<\/nav>/);
+  assert.match(guide, /canonical GitHub installation protocol linked above/);
+  assert.match(guide, /Do not send the user back\nto this website to repeat the same request/);
+  assert.ok(guide.includes('https://github.com/bladnman/producer_pattern/blob/main/pattern/INSTALL.md'));
+  assert.ok(guide.includes('https://github.com/bladnman/producer_pattern/blob/main/pattern/references/UPDATES.md'));
+  assert.match(guide, /exact reviewed commit/);
+  assert.match(guide, /Copy only the manifest-selected payload/);
 });
 
 test('production output contains only reviewed public assets, not installation/private state', async () => {

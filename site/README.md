@@ -8,6 +8,10 @@ The canonical contracts and install/update protocols remain in the public GitHub
 package. The website summarizes them and links there; it is not an installer.
 Visitors paste requests into their existing project agent, rather than a terminal.
 The browser cannot inspect a local project or claim an installation is present.
+Install and update requests use `https://producer.metal-sole.com` as the public
+front door. A visible **For an agent** link opens `install.md`; that guide directs
+authorized work straight to the canonical GitHub package and exact reviewed SHA.
+It must not ask an agent to return to the website and repeat the same request.
 
 ## Build and background preview
 
@@ -72,7 +76,8 @@ The site makes no adoption, performance, customer, or behavioral guarantees.
 
 ## Local verification — October 17, 2026
 
-Five site contract cases and all 30 repository tests pass. The production build
+Six site contract cases pass. All 30 repository tests passed at the initial launch;
+the unchanged helper is outside this website revision. The production build
 contains ten allowlisted files. Background headless checks at 1440, 390 and 320
 pixels verify all three exact copy requests, keyboard activation and denied-
 clipboard selection, visible anchor navigation, reduced-motion rendering and no

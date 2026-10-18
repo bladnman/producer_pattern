@@ -234,6 +234,11 @@ explains the producer/worker/recorder division and gives visitors copyable reque
 for their existing project agent to install, check, or explicitly update the pattern.
 GitHub's published package remains authoritative; the agent guide links to its
 current protocols instead of maintaining another installation implementation.
+**Front-door refinement, October 17:** Human-facing install/update requests use
+the public `producer.metal-sole.com` address. A prominent “For an agent” link opens
+the readable guide, which sends authorized work directly to the canonical GitHub
+protocol and an exact reviewed revision. This supersedes copying the raw repository
+URL in the website's human-facing prompts; it does not change upstream authority.
 **Why/tradeoff:** Repository contracts are precise but dense for a first visit.
 A short visual introduction makes the next action clear, while a separate summary
 can drift. Keep installation/status/update claims bounded and link their source.
@@ -247,6 +252,8 @@ installer. The browser cannot declare the visitor's project installed. A display
 producer marker describes a checked setup/role, not running workers. Updates preserve
 adaptations and private state under [UPDATES.md](../pattern/references/UPDATES.md).
 The public build excludes project state, private sources, and maintainer archives.
+A domain-based request must reach the GitHub installation steps without sending
+the agent or user around a loop of copying the same website request again.
 **Revisit:** Real visitors cannot find the next step, summary copy contradicts
 contracts, or a public build includes files beyond its explicit allowlist.
 

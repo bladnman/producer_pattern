@@ -1,4 +1,4 @@
-# Producer Pattern: agent entrypoint
+# Producer Pattern: for an agent
 
 This site explains the method. The authoritative installation package is published
 at https://github.com/bladnman/producer_pattern/tree/main/pattern . Read its
@@ -12,10 +12,12 @@ when the user requests adoption. Merely reading this guide is not an adoption re
 The visitor copies this into the agent already working in the target project:
 
 ```text
-Install the Producer Pattern in this project: https://github.com/bladnman/producer_pattern
+Install the Producer Pattern in this project: https://producer.metal-sole.com
 ```
 
-On that request, follow the canonical installation protocol. Resolve published
+When the user actually authorizes that request, continue directly with the
+canonical GitHub installation protocol linked above. Do not send the user back
+to this website to repeat the same request. Resolve published
 GitHub main to one exact reviewed commit and read the package at that revision.
 Copy only the manifest-selected payload into the target project's `.producer/`.
 Preserve existing instructions, local adaptations, private project context,
@@ -55,9 +57,10 @@ stricter host cadence. Stored status does not prove execution.
 ## Update on an explicit request
 
 ```text
-Update the Producer Pattern in this project from https://github.com/bladnman/producer_pattern
+Update the Producer Pattern in this project from https://producer.metal-sole.com
 ```
 
+This public address is the guide's front door; GitHub remains the update source.
 Follow the installed update protocol, or the current package's INSTALL guide
 if the older installation has none. The canonical protocol is
 [UPDATES](https://github.com/bladnman/producer_pattern/blob/main/pattern/references/UPDATES.md).
