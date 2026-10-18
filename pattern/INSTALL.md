@@ -17,9 +17,19 @@ not payload. A temporary staging clone is optional transport only.
 1. Inspect the target's actual startup instruction entrypoint and referenced rules.
    Identify root, existing owners/tracker, and real delegation, model, effort,
    context, observation, and return capabilities. A tier label proves no selection.
-2. Have an installation worker copy the selected manifest files. Fill the installed
-   PROJECT.md from actual project context, leaving unknowns visible. The producer
-   decides mode/mappings; the worker records them. Tracked is default; lean optional.
+   Before writing private context, config, state, sources, or receipts, verify
+   effective exclusions and that none of those destinations are Git-indexed.
+   Preserve already tracked user history and report a reconciliation need; ignore
+   rules alone do not protect indexed files. Keep generic contracts versionable
+   where desired; customized context and setup facts stay private. Template seeds
+   carry placeholders, never shared initialized IDs or copied runtime state.
+   A generated project initializes its own identity only after this privacy gate.
+2. Resolve published GitHub `main` to one exact commit SHA and inspect the selected
+   revision before copying; retain its URL/SHA as the installation source. A local
+   unpublished candidate must be labeled as such. Have an installation worker copy
+   the selected manifest files. Fill installed PROJECT context from actual facts,
+   leaving unknowns visible. The producer decides mode/mappings; the worker records
+   them. Tracked is default; lean optional.
    An existing canonical tracker uses the contract without creating a second store.
 3. For a new bundled tracked store, have the recorder run
    `python3 <target>/.producer/tools/requests.py init`. It creates/preserves config
@@ -35,10 +45,14 @@ not payload. A temporary staging clone is optional transport only.
 
    ```markdown
    <!-- producer-pattern:start -->
-   Read `.producer/PATTERN.md` and resolve your assignment role first. Delegated
-   agents default to worker at every depth. Producers also read PROJECT.md,
-   MODELS.md, and STATE.md inside `.producer/`. Workers/reviewers load their
-   assignment and applicable project rules; recorders load STATE and its tracked
+   Read `.producer/PATTERN.md` and resolve your assignment role first. New project
+   conversations default to their project producer regardless of who opened them;
+   explicit assignments override that default. Bounded delegated assignments must
+   name Role: worker/producer, scope, and authority. Clarify missing delegated roles
+   with the assigner; ancestry or inherited history grants neither role.
+   Producers also read PROJECT.md, MODELS.md, and STATE.md inside `.producer/`.
+   Workers/reviewers load their assignment and applicable project rules; recorders
+   load STATE and its tracked
    references when applicable. Follow the requirements for your resolved role;
    producer-only authority stays with producers. Before a producer uses the 🎬
    identity, have a Small recorder check this conversation's installed wiring,
@@ -46,6 +60,13 @@ not payload. A temporary staging clone is optional transport only.
    and judges the receipt under PATTERN's startup check. Other roles omit the badge.
    <!-- producer-pattern:end -->
    ```
+
+For every mode, record the source URL/SHA, selected managed-file paths and SHA-256
+baselines, startup wiring, adaptations, and verification in an ignored setup receipt.
+Baselines describe installed bytes after adaptation, not successful behavior. A
+generic template PROJECT remains versionable; actual generated-project context
+belongs in an ignored local overlay loaded by its startup hook. Never seed a
+completed receipt.
 
 ## Verify without polluting the backlog
 
@@ -91,8 +112,8 @@ project configuration/mode, and canonical state checked. Align PROJECT's startup
 fields with that evidence. Resolve each conversation's assignment role first. For
 a producer conversation, the recorder checks the current facts before the producer
 judges whether to show `🎬`; refresh after relevant changes. Other roles omit the
-badge without this check. Installation alone never makes an inherited worker
-a producer. Missing wiring/files, unknown mode, or an unavailable recorder leave
+badge without this check. Installation never overrides an explicit worker assignment.
+Missing wiring/files, unknown mode, or an unavailable recorder leave
 the check incomplete; explain that plainly without a badge. Lean and existing
 trackers use their applicable setup without requiring a bundled helper or config.
 Report installation separately from author approval or a successful fresh-session
@@ -101,11 +122,14 @@ start workers, and the identity marker does not claim live supervision.
 
 ## Repeat, upgrade, remove
 
-On rerun inspect existing payload, config, and hook. Reuse one hook; preserve local
-PROJECT context and contract adaptations. Compare with the selected incoming
-manifest; back up conflicting files to unique dated paths before a worker merges.
-Never overwrite local edits blindly or migrate a tracker as an upgrade side effect.
-Record source/version, backups, and changes in PROJECT.md.
+For an existing installation, follow the installed
+[update protocol](references/UPDATES.md). Published GitHub `main` is the upstream
+source of truth; resolve it to an exact reviewed SHA for each explicit update.
+Normal startup never silently updates. Reuse the existing hook and preserve local
+context, adaptations, identities, canonical state, and unfinished work. Missing
+baselines require comparison to the prior pinned upstream revision or explicit
+review, never blind replacement. Record a new source revision only after checks
+succeed; no tracker migration is an update side effect.
 
 For removal, have the recorder identify unfinished requests, actual handles,
 pending evaluation, and decisions. Reconcile execution and retain records at an

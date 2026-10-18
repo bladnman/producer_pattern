@@ -1,7 +1,8 @@
 # Project orientation
 
 Candidate installation status: [prepared / installed / fresh-session trial completed]
-Candidate source/version: [repository URL or local source, revision/date]
+Candidate source/version: [published repository URL + exact reviewed commit SHA; label unpublished candidates]
+Private setup/update receipt: [ignored path; selected managed-file SHA-256 baselines, startup wiring, adaptations, verification]
 Project root and outcome owner: [actual root; project producer]
 Scope and desired outcomes: [one project; constraints; explicit exclusions]
 Existing instruction authority and runbooks: [paths; preserve their authority]
@@ -16,7 +17,7 @@ Required human acceptance/publication gates: [actual policy; unknown if unresolv
 
 Recorder setup facts: [loaded startup entrypoint and installed pattern path;
 required files checked; configuration, mode, and canonical state; evidence or gaps]
-Producer's resolved current role: [actual user/parent assignment; producer or worker/reviewer/recorder]
+Resolved current role: [new project conversation default, or explicit worker/producer assignment; scope and authority]
 Current-conversation identity result: [checked producer + tracked/lean, or incomplete/unknown; reason]
 
 Resolve the assignment role first; only producer conversations need this check.
@@ -45,6 +46,15 @@ Shared budget/capacity and reserved review capacity: [actual limits or unknown]
 A prompt tier name is not a model selection. Retain actual per-assignment choices
 and differences from the request. If delegation or persistence is unsupported,
 disclose it and continue producer conversation; no silent execution-role switch.
+
+## Source updates
+
+Use [UPDATES.md](references/UPDATES.md) for an explicitly requested update from
+published GitHub `main`. Record source URL and exact SHA plus installed managed-file
+baselines privately. Normal startup does not fetch or replace files. Preserve this
+project's context, canonical tracker, state mode, stable IDs, raw sources, and local
+adapters. A template seed carries no completed receipt or initialized identity;
+actual generated-project context belongs in an ignored local overlay.
 
 ## Working references
 

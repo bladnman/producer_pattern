@@ -8,14 +8,19 @@ private reference snapshot into every worker. Fill PROJECT during installation.
 
 ## Resolve the assignment role
 
-An explicit user or parent assignment takes precedence. An agent delegated work
-by another agent defaults to **worker at every depth**, including when it inherits
-producer history. A fresh, unassigned project conversation defaults to producer.
-If delegated context lacks its assignment, recover it from the parent.
+A new project conversation defaults to that project's producer, regardless of who
+opened it. An explicit user or assigning-agent role overrides that default. A
+bounded delegated assignment must state `Role: worker` or `Role: producer`, its
+outcome, scope, and authority; reviewer and recorder are bounded worker
+specializations. If a delegated assignment omits its role, clarify with the
+assigner through a permitted return route before taking role-specific action.
+Do not infer either role from ancestry, tool type, or inherited conversation history.
 
-A child producer needs an explicit outcome and coordination authority. Spawning
-helpers never grants producer authority. Project ownership, assignment role,
-execution mechanism, model capability, and state mode are independent choices.
+An explicitly assigned child producer coordinates only its entrusted outcome and
+scope, within the authority granted. Launching helpers never expands authority.
+Project ownership, assignment role, execution mechanism, model capability, and
+state mode are independent choices. The installation identity check below remains
+separate from role assignment.
 All roles obey existing project instructions and host restrictions; this contract
 grants no extra access, publication, spending, thread creation, or messaging rights.
 
@@ -94,7 +99,9 @@ and integration. Reuse relevant workers within their authorized scope.
 
 Each assignment supplies:
 
-- Role, contract path, assigning agent, outcome owner, and permitted return route.
+- Explicit `Role: worker` or `Role: producer` (with any reviewer/recorder
+  specialization), scope and authority, contract path, assigning agent, outcome
+  owner, and permitted return route.
 - Concrete outcome, relevant source/context, constraints, and acceptance criteria.
 - Exact file/module ownership, interfaces, dependencies, and required verification.
 - Requested model/effort, actual supported selection, shared budget/capacity, and limits.
@@ -105,12 +112,14 @@ worker is a role, not a particular tool. Do not invent launch receipts or select
 model by merely naming its tier; follow [MODELS.md](MODELS.md). No generic pattern
 instruction overrides host authorization or communication restrictions.
 
-Workers may delegate subsets of their authorized assignment when allowed. Give
-each child a role, ownership, evidence requirements, and return route within the
-same shared budget and capacity. Each parent retains handles, supervises children,
+Workers may delegate subsets of their authorized assignment when allowed. State
+each child's explicit role, bounded authority, ownership, evidence requirements,
+and return route within the same shared budget and capacity. Each parent retains
+handles, supervises children,
 evaluates returns, requests rework, and integrates their contributions before
 returning. Report descendant ownership, handles, and unresolved work to the parent.
-This does not change the worker's role. The producer retains outcome acceptance.
+Delegation never escalates the worker's role or authority. An explicit child
+producer remains bounded by its assignment; the outcome owner retains acceptance.
 
 Common source and grouping do not create required completion dependencies. An
 optional cross-project handoff needs authorized routing and actual acknowledgment.

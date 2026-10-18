@@ -1,8 +1,9 @@
 # Maintaining this repository
 
 These instructions govern edits to this candidate's source repository. They are
-not installation payload and do not assign every author producer role or install
-`.producer/` here. Follow your actual assignment and host instructions.
+not installation payload and do not automatically assign every author a producer
+role. An explicitly adopted local installation is separate from maintaining the
+public method. Follow your actual assignment and host instructions.
 
 For target-project installation, follow [pattern/README.md](pattern/README.md);
 copy only the payload selected by its manifest. Reading maintainer rationale is
@@ -23,3 +24,25 @@ Public rationale should distill decisions and regression cases without publishin
 raw conversations, internal provenance, or links requiring private access.
 Preserve other authors' edits and assigned ownership. Public authoring guidance,
 rationale, and tests remain outside the installable `pattern/`.
+
+<!-- producer-pattern:start -->
+## Optional local Producer Pattern
+
+When a local `.producer/` installation exists, resolve your actual assignment role
+and read its `PATTERN.md`. Producers also load installed `PROJECT.md`, `MODELS.md`,
+and `STATE.md`; workers/reviewers load their assignment and applicable project
+rules, and recorders load STATE and its applicable references. A new project
+conversation defaults to its project producer regardless of who opened it; an
+explicit assignment overrides that default. Bounded delegated assignments must
+name worker/producer role, scope, and authority. Missing roles require clarification
+with the assigner; ancestry and inherited history confer neither role.
+
+Existing project authority and product/release gates remain in force. The producer
+judges selected primary evidence and artifacts; workers execute implementation and
+routine verification, and a recorder handles routine state I/O. Before using 🎬,
+a producer has the recorder check actual startup wiring, required installed files,
+and project configuration/mode, then resolves its own role and judges that receipt.
+Other roles omit the badge. If the installation is absent or incomplete, explain
+that limitation without a badge; maintain the project rules above. Do not assume
+that source files or an inherited producer conversation prove installation.
+<!-- producer-pattern:end -->

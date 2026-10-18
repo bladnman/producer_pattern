@@ -142,7 +142,8 @@ and tests. The layout is an implementation choice. Root README routes each
 audience explicitly.
 **Why/tradeoff:** The workshop remains shareable and refactorable while an agent can
 download/install just the method. `pattern/manifest.json` selects copied payload;
-guides and authoring AGENTS are not target instructions. No pattern is installed here.
+guides and authoring AGENTS are not target instructions. Local adoption is a separate,
+explicit setup choice; a source checkout alone is not installation.
 **Consequence:** Generic rationale and tests remain public and outside the
 installation payload. Raw conversations and internal references remain private.
 **Revisit:** a boundary check reveals an external package dependency, accidental
@@ -179,6 +180,53 @@ its report. User questions stay actionable, and a host question tool is not echo
 as a second question in chat. **Revisit:** real use shows missed attention needs,
 noisy repetition, false setup claims, or supervision ending at a status report.
 
+## R10 — Assign roles explicitly; preserve project ownership across entry routes
+
+**Accepted decision, October 17:** A new project conversation defaults to that
+project's producer regardless of who opened it. Explicit user/assigner roles
+supersede the default. Every bounded delegated assignment names worker/producer
+role, outcome, scope, and authority; reviewers and recorders are bounded worker
+specializations. Missing delegated roles require clarification with the assigner,
+not inference from ancestry, tool type, or inherited history. This supersedes the
+earlier rule that all agents launched by agents defaulted to workers at every depth.
+**Why/tradeoff:** Entering another project should reach its accountable producer,
+while a bounded worker must not acquire producer authority merely by inheriting
+context. Explicit child producers can coordinate an entrusted scope; worker
+subdelegation never expands authority. The installation/badge check is independent.
+**Implemented:** [PATTERN.md](../pattern/PATTERN.md) and the
+[installation hook](../pattern/INSTALL.md) carry the revised contract.
+**Regression cases:** A session opened in a peer project by another producer serves
+as that project's producer by default. An explicit worker inheriting producer history
+stays a worker. An explicit child producer coordinates only its granted outcome.
+A delegated assignment with no role seeks clarification before role-specific action.
+**Verification limit:** Document/package checks do not establish actual fresh-session
+role behavior. Revisit if ambiguous assignment boundaries still cause role drift.
+
+## R11 — Update from a pinned public source without replacing project state
+
+**Accepted decision, October 17:** Published GitHub `main` is the upstream source of
+truth. Explicit agent-driven updates resolve one exact reviewed SHA, back up managed
+files and startup wiring, and compare installed baseline/current/incoming bytes.
+Normal startup does not silently update. Private setup receipts retain source URL/SHA
+and managed-file hashes; old receipts without baselines require safe prior-upstream
+comparison or review. No updater daemon, new version registry, or state engine is added.
+**Why/tradeoff:** A common upstream makes catch-up possible, but installations contain
+project context and adapters that upstream must not overwrite. Schema compatibility
+is checked; migration requires its own decision. Baselines describe installed bytes,
+not proof of behavior. Partial failures must remain visible rather than claim a new
+accepted revision.
+**Implemented:** The base manifest includes [UPDATES.md](../pattern/references/UPDATES.md);
+[INSTALL.md](../pattern/INSTALL.md) and [PROJECT.md](../pattern/PROJECT.md) route setup
+and updates through private receipts.
+**Regression cases:** An adapted existing-tracker installation merges upstream role
+rules while preserving tracker, context, IDs, raw sources, and unfinished work.
+Lean stays lean. Missing baselines block blind replacement. An incompatible helper
+schema leaves the existing helper/state intact. Template copies receive fresh local
+identities at first use, never cloned initialized state or completed receipts.
+**Verification limit:** Static/package checks establish reachable self-contained
+instructions; actual target catch-up and fresh-session trials need separate receipts.
+Revisit when a real update conflict exposes an insufficient preservation check.
+
 ## Maintain this explanation
 
 At a material design choice, update the relevant topic rather than append every
@@ -213,3 +261,7 @@ pointers. Public documentation must stand on its own.
   existing host, handoff, pause, and interruption boundaries.
 - Required current setup facts from the recorder and role resolution by the producer
   before identity use, without claiming behavioral verification or worker liveness.
+- Superseded ancestry-based worker defaults with project-session producer defaults
+  and explicit role/scope/authority on every bounded delegated assignment.
+- Added pinned GitHub-source update instructions and private managed-file baselines;
+  preserved project state, adapters, template identity boundaries, and explicit migration gates.

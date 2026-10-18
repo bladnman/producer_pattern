@@ -53,3 +53,6 @@ temp/
 
 # Local preserved source snapshots
 .reference/
+
+# Local Producer Pattern installation, configuration, source messages and receipts
+/.producer/

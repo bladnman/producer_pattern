@@ -42,3 +42,12 @@ Read [PATTERN.md](PATTERN.md), [MODELS.md](MODELS.md), [STATE.md](STATE.md), and
 fillable [PROJECT.md](PROJECT.md) as needed for setup. The package depends on no
 files outside this subtree. Reading alone is not adoption; an adoption request
 authorizes the reversible setup. Host restrictions and existing authority remain.
+
+## Update an existing installation
+
+Ask the project agent to follow its installed [update protocol](references/UPDATES.md),
+or this package's [INSTALL.md](INSTALL.md) when the older installation has none.
+Use published GitHub `main` resolved to an exact reviewed commit, preserve local
+adaptations and private state, and verify before recording the new revision.
+An update request is distinct from reading the repository; startup does not silently
+update an installation.

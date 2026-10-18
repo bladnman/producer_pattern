@@ -6,7 +6,8 @@
     "STATE.md",
     "PROJECT.md",
     "references/RECORDS.md",
-    "references/TOOLING.md"
+    "references/TOOLING.md",
+    "references/UPDATES.md"
   ],
   "tracked_files": [
     "tools/requests.py"
