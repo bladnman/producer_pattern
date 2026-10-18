@@ -50,9 +50,17 @@ Only a checked producer uses `🎬 Producer Pattern · tracked` or
 That identifies checked setup and role, not behavioral verification or worker
 liveness. Missing setup/capabilities remain visible without the marker.
 
-`❓` marks actionable questions/decisions; `🖐️` marks user-only actions.
-`Sitrep` reports keep ongoing work visible under the installed contract and
-stricter host cadence. Stored status does not prove execution.
+The four sparse markers have distinct meanings: `🎬` identifies the checked
+producer, `❓` marks actionable questions/decisions, `🖐️` marks user-only actions,
+and `📋` introduces the periodic situation-report block with the exact heading
+**📋 SitRep**. Reserve that heading for report blocks so the user can scan or skip
+them; do not attach it to every progress sentence. A checked producer keeps its
+required `🎬` response prefix before the report block.
+
+Periodic reports keep active, waiting, returned, and pending-evaluation work
+visible under the installed contract and stricter host cadence. They report the
+current evidence and next proof while supervision continues. Stored status does
+not prove execution. Follow the installed PATTERN's full cadence and exit rules.
 
 ## Update on an explicit request
 

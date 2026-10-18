@@ -71,12 +71,14 @@ A warm neutral page with a restrained rust accent introduces the producer,
 workers, and recorder with a diagram and one labeled illustrative request.
 Installation, checking setup, and manual updates each have a copyable request.
 Tracked/lean options and existing tracker preservation stay visible. The status
-example explains the three sparse markers and Sitrep without claiming activity.
+example explains the four sparse markers and the **📋 SitRep** report heading
+without claiming activity. That heading belongs to periodic report blocks, while
+the checked producer retains its `🎬` response prefix.
 The site makes no adoption, performance, customer, or behavioral guarantees.
 
 ## Local verification — October 17, 2026
 
-Six site contract cases pass. All 30 repository tests passed at the initial launch;
+Seven site contract cases pass. All 30 repository tests passed at the initial launch;
 the unchanged helper is outside this website revision. The production build
 contains ten allowlisted files. Background headless checks at 1440, 390 and 320
 pixels verify all three exact copy requests, keyboard activation and denied-

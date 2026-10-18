@@ -15,6 +15,11 @@ shared immutable user sources and typed relationship/ownership records. Files
 preserve continuity, not agent liveness
 or an automatic wakeup. No service, scheduler, or new chat is installed.
 
+Periodic supervision reports use **📋 SitRep** so they are easy to scan or skip.
+This labels the report block; the checked producer's `🎬` identity, `❓` questions,
+and `🖐️` user-only actions keep their meanings. See [PATTERN.md](PATTERN.md) for
+the sparse marker rules and supervision requirements.
+
 ## Adopt in a target project
 
 Ask the agent working in that project:

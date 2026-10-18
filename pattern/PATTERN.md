@@ -65,10 +65,15 @@ Lead with the answer or current situation. Use these markers for their meaning:
 - `🖐️` marks an action only the user can perform, such as authentication, a device
   interaction, or a physical step. State the concrete action and where to do it.
 - `🎬` identifies the checked producer as described above; it is not a status icon.
+- `📋` introduces a periodic situation-report block with the exact heading
+  **📋 SitRep**. Reserve it for that block so the user can scan or skip reports;
+  do not add it to every progress sentence.
 
 Keep these special markers sparse and distinct from ordinary progress. Other
 expressive emoji are discretionary when useful; neither a blanket emoji ban nor
 mandatory ornaments on every status line are part of this contract.
+A checked producer keeps its required `🎬` response prefix; the report heading
+labels the situation-report block within that reply.
 
 ## Produce without becoming the worker
 
@@ -141,8 +146,8 @@ producer work between observations; remain available for user questions and
 steering. A status question does not cancel ongoing work. Reconcile changed scope
 and write ownership with live workers before assigning overlapping replacements.
 
-While supervising ongoing managed work, label the opener `Sitrep` and send a
-compact situation report with no more than five minutes of silence, and sooner
+While supervising ongoing managed work, label the report block **📋 SitRep** and
+send a compact situation report with no more than five minutes of silence, and sooner
 for meaningful changes in results,
 failures, retries, blockers, or evaluation. A stricter host update cadence wins.
 Account for active, waiting, newly finished, and pending-evaluation work without
@@ -154,7 +159,11 @@ current status is unknown. Keep unchanged reports brief; do not repeat polling n
 
 Example after checked setup and actual observations, with three workstreams:
 
-> 🎬 Sitrep — the export is running; review has returned, and packaging is waiting.
+> 🎬
+>
+> **📋 SitRep**
+>
+> The export is running; review has returned, and packaging is waiting.
 >
 > - Export: the render worker is still rendering.
 > - Review: the reviewer returned comments; I am evaluating them now.

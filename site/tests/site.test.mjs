@@ -66,6 +66,22 @@ test('the public front door exposes an agent guide that proceeds to canonical Gi
   assert.match(guide, /Copy only the manifest-selected payload/);
 });
 
+test('the four sparse markers and exact periodic report label agree with the source contract', async () => {
+  const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+  const guide = await readFile(new URL('../public/install.md', import.meta.url), 'utf8');
+  const contract = await readFile(new URL('../../pattern/PATTERN.md', import.meta.url), 'utf8');
+  assert.deepEqual([...html.matchAll(/<dt>([^<]+)<\/dt>/g)].map(match => match[1]), ['❓', '🖐️', '🎬', '📋']);
+  assert.match(html, /<h4 class="sitrep-heading">📋 SitRep<\/h4>/);
+  for (const document of [html, guide, contract]) {
+    assert.ok(document.includes('📋 SitRep'));
+    assert.doesNotMatch(document, /\bSitrep\b/);
+  }
+  assert.match(guide, /do not attach it to every progress sentence/);
+  assert.match(contract, /no more than five minutes of silence/);
+  assert.match(contract, /A stricter host update cadence wins/);
+  assert.match(contract, /A checked producer keeps its required `🎬` response prefix/);
+});
+
 test('production output contains only reviewed public assets, not installation/private state', async () => {
   execFileSync(process.execPath, ['scripts/build.mjs'], { cwd: root });
   const names = (await readdir(new URL('../dist/', import.meta.url))).sort();

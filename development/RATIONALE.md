@@ -154,10 +154,18 @@ copying of authoring material, or unintended publication of private evidence.
 **Problem:** A real question or user-only action can disappear among progress
 updates. A polished update can also hide that supervision has stopped. A producer
 label can imply an installation that was never checked.
-**Accepted decision, October 17:** Use three semantic markers: `❓` for actionable
+**Initial decision, October 17:** Use three semantic markers: `❓` for actionable
 user questions/decisions, `🖐️` for user-only actions, and `🎬` for producer identity
 after a current-conversation installation and role check. Other expressive emoji
 remain discretionary; special markers are sparse, not routine status decoration.
+**Accepted refinement, October 17:** Add `📋` for the periodic situation-report
+block, using the exact heading **📋 SitRep**. This supersedes the earlier unmarked
+`Sitrep` opener and its capitalization. Four markers now distinguish checked
+producer identity, user questions, user-only actions, and periodic report blocks.
+The checked producer retains its `🎬` reply prefix; `📋 SitRep` labels a block
+inside that reply. Reserve the heading for periodic reports so readers can scan
+or skip them; it is not a prefix for every progress sentence. Cadence, evidence,
+continued supervision, and exit requirements are unchanged.
 **Why/tradeoff:** A small vocabulary makes attention needs recognizable. One marker
 can introduce several numbered questions. A checked identity exposes startup truth,
 while its limited meaning avoids implying tested behavior or live execution.
@@ -177,8 +185,10 @@ identity. A correctly wired lean installation can pass without the bundled helpe
 With three workstreams, an active export, returned review, and waiting packaging
 all remain visible; the producer evaluates the review and keeps supervising after
 its report. User questions stay actionable, and a host question tool is not echoed
-as a second question in chat. **Revisit:** real use shows missed attention needs,
-noisy repetition, false setup claims, or supervision ending at a status report.
+as a second question in chat. The heading identifies a periodic report without
+turning ordinary progress sentences into reports or suggesting that saved state
+proves live workers. **Revisit:** real use shows missed attention needs, noisy
+repetition, false setup claims, or supervision ending at a status report.
 
 ## R10 — Assign roles explicitly; preserve project ownership across entry routes
 
@@ -287,6 +297,9 @@ pointers. Public documentation must stand on its own.
 ## Decision history — October 17, 2026
 
 - Added sparse question, user-action, and checked producer-identity markers.
+- Refined the marker vocabulary with **📋 SitRep** for periodic report blocks,
+  superseding the unmarked `Sitrep` opener while retaining producer identity and
+  the existing supervision/cadence requirements.
 - Added a bounded situation-report cadence with continued supervision; preserved
   existing host, handoff, pause, and interruption boundaries.
 - Required current setup facts from the recorder and role resolution by the producer
