@@ -56,3 +56,24 @@ Use published GitHub `main` resolved to an exact reviewed commit, preserve local
 adaptations and private state, and verify before recording the new revision.
 An update request is distinct from reading the repository; startup does not silently
 update an installation.
+
+## Remove a project installation
+
+On an explicit removal request, identify unfinished requests, actual execution
+handles, pending evaluation, and decisions with the recorder, then reconcile their
+ownership and recovery pointers. Disable only the identifiable Producer startup
+hook, preserving unrelated instructions. Retain owned `.producer/` state, context,
+requests, and backups in place or archive them securely at an agreed reachable
+location; do not delete state unless separately requested. Leave shared canonical
+trackers untouched. Remove unused contract files only after preserving those records.
+Removing files does not stop live agents or change their roles; refresh affected
+conversations before claiming their instructions or roles have changed.
+
+## Optional global skill
+
+A separate optional skill routes lifecycle requests to this guide. For its
+installation or removal, see the repository's
+[global skill guidance](https://github.com/bladnman/producer_pattern/blob/main/README.md#optional-global-skill).
+Removing that global skill removes discovery through the skill; it does not remove
+any project's pattern installation. Project removal likewise leaves the global
+skill installed unless its removal is requested too.

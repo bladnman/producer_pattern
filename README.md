@@ -31,3 +31,16 @@ the agent installation entrypoint is [pattern/README.md](pattern/README.md).
 For an existing installation, use the [update protocol](pattern/references/UPDATES.md).
 Published GitHub `main` is the upstream source of truth; agents pin each installation
 or explicit update to an exact reviewed commit rather than silently updating at startup.
+
+## Optional global skill
+
+On request, copy just [skill/producer-pattern/SKILL.md](skill/producer-pattern/SKILL.md)
+to the host's per-user skill directory. For Codex, use
+`$CODEX_HOME/skills/producer-pattern/SKILL.md` when `CODEX_HOME` is set, otherwise
+`~/.codex/skills/producer-pattern/SKILL.md`; for other hosts, use their user-level
+skill directory. Preserve an existing skill before replacement.
+Do not install a project-local skill by default. This tiny optional pointer routes
+lifecycle requests to the current canonical guide; installing it does not install
+the pattern in any project. On a request to remove the global skill, remove only
+its `producer-pattern/SKILL.md` and its directory if empty, preserving other skills
+and all project installations.

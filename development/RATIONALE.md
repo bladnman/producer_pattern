@@ -1,6 +1,6 @@
 # Why the Producer Pattern has this shape
 
-Living design rationale · updated October 17, 2026. This repository authors a
+Living design rationale · updated October 18, 2026. This repository authors a
 candidate pattern; it has not automatically adopted or installed that pattern.
 This document explains the current reasoning, tradeoffs, and revisit triggers.
 It is not an activity log or a claim that every design direction is approved.
@@ -267,6 +267,32 @@ the agent or user around a loop of copying the same website request again.
 **Revisit:** Real visitors cannot find the next step, summary copy contradicts
 contracts, or a public build includes files beyond its explicit allowlist.
 
+## R13 — Keep global discovery separate from project installation
+
+**Accepted decision, October 18:** Offer a tiny optional global skill that points
+to the current canonical [package guide](../pattern/README.md) for requested
+install/add/update/upgrade/remove operations. Its
+[source](../skill/producer-pattern/SKILL.md) stays outside the manifest payload;
+[distribution guidance](../README.md#optional-global-skill) selects the host's
+per-user skill directory on request, without a project-local default.
+**Why/tradeoff:** Discoverability should not duplicate the protocol or silently
+adopt it in every project. Fetching the authoritative guide avoids stale copied
+rules; a global pointer does not confer producer authority. This adds an optional
+entry route without changing the existing project adoption boundary.
+**Implemented:** The source skill and global distribution guidance exist; the
+package guide now explicitly distinguishes project removal from skill removal and
+preserves owned project records and shared trackers. Existing installation and
+update contracts remain authoritative for their operations.
+**Regression cases:** A global skill discovered in a new project routes to the
+canonical guide without declaring an installation. An explicit update reads the
+current protocol rather than copied skill rules. Removing a project hook preserves
+private context, requests, backups, and shared canonical trackers; removing only
+the skill leaves project installations intact.
+**Verification limit:** Skill validation and package isolation/link checks verify
+structure and boundaries, not fresh-session discovery, target adoption, or removal.
+**Revisit:** Real lifecycle requests misroute, pointer copies accumulate protocol,
+or discovery is mistaken for project authority.
+
 ## Maintain this explanation
 
 At a material design choice, update the relevant topic rather than append every
@@ -310,3 +336,9 @@ pointers. Public documentation must stand on its own.
   preserved project state, adapters, template identity boundaries, and explicit migration gates.
 - Added a public introduction outside the installable package, with copyable agent
   requests and GitHub protocols remaining authoritative; publication is a separate gate.
+
+## Decision history — October 18, 2026
+
+- Added an optional global pointer skill outside the project payload, preserving
+  one canonical lifecycle guide and explicit project adoption.
+- Clarified conservative removal and the independent global-skill/project boundaries.
