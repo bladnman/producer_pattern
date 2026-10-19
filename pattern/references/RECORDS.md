@@ -34,9 +34,10 @@ acceptance, and worker instructions are visibly separate from the user's words.
 Use an optional umbrella only for a useful whole-scope commitment, not every message.
 
 Later steering is a new immutable source linked as an addendum, including tiny
-corrections. Preserve originals and old decisions. Capture pending steering first,
-reconcile live assignments, then amend/replan through allowed lifecycle operations.
-Obtain and acknowledge source/request/update receipts before dispatch. Captured or
+corrections. Preserve originals and old decisions. Capture scope-setting steering
+first, reconcile live assignments, then amend/replan through allowed lifecycle
+operations. Obtain and acknowledge the receipts that dependent work needs before
+dispatch; routine records may batch at a checkpoint ([STATE](../STATE.md)). Captured or
 queued work is not itself execution authority.
 
 ## Seven states, three locations

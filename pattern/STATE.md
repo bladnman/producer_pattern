@@ -41,9 +41,14 @@ attachment bytes and hashes; record unavailable material explicitly. Give the
 recorder exact text or a source path, never a reconstructed summary. Link separate
 outcomes to the shared source. Later steering, including tiny corrections, is a
 new immutable source linked as an addendum; preserve original scope/history.
-Capture pending steering before changing scope, reconcile live assignments, and
-use the lifecycle's amendment/replanning rules. Acknowledge capture/update receipts
-before dispatch. A captured idea is not execution authority.
+Capture scope-setting or decision-making messages, and acknowledge their receipts,
+before dispatching work that depends on them; then reconcile live assignments and
+use the lifecycle's amendment/replanning rules. Routine steering, receipts, and
+outcomes may be recorded together in one short batch at a natural checkpoint, such
+as the end of a task. Keep records small and fast. Prefer a fresh Small recorder
+with short, exact instructions over resuming a long-lived recorder whose context
+keeps growing. Only timing and size relax; capture stays exact and immutable.
+A captured idea is not execution authority.
 
 ## Relationships and acceptance
 

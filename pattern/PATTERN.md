@@ -108,7 +108,8 @@ Each assignment supplies:
   specialization), scope and authority, contract path, assigning agent, outcome
   owner, and permitted return route.
 - Concrete outcome, relevant source/context, constraints, and acceptance criteria.
-- Exact file/module ownership, interfaces, dependencies, and required verification.
+- Exact file/module ownership, interfaces, dependencies, and the smallest
+  sufficient verification; workers do not add their own extra layers.
 - Requested model/effort, actual supported selection, shared budget/capacity, and limits.
 - “You are not alone in the workspace. Preserve others' edits and adapt to them.”
 
@@ -191,6 +192,13 @@ ask, addenda, acceptance criteria, selected primary evidence, and actual artifac
 Ask workers to perform appropriate integrated checks; review what those checks
 establish. Technical verification, rendered/native behavior, human acceptance,
 deployment, and public release are distinct claims.
+
+Keep verification proportionate. Match it to the claim's risk, reversibility, and
+audience, and use the smallest check that establishes the claim. Explorations and
+prototypes need a quick look, such as a screenshot and a short interaction check,
+not release-grade evidence. Avoid exhaustive sweeps and repeated full-suite runs
+during rework; run the full suite before a release. Once a claim is established,
+more evidence is not better evidence.
 
 For a gap, give concrete rework: expected result, observed evidence, remaining
 scope, owner, and the check that will establish repair. Observe and evaluate the

@@ -368,3 +368,9 @@ pointers. Public documentation must stand on its own.
   ordinary progress, the five-minute silence limit, and stricter host timing.
 - Kept the reported repetition distinct from its hypothesized cause; documentation
   implements the refinement, while fresh-session behavioral checks remain pending.
+- Added proportionality to verification and records. Evidence demands had no
+  counterweight and compounded: exhaustive layout sweeps and release-grade QA on a
+  throwaway prototype, and a per-message capture round-trip before work could move.
+  Verification now matches risk, reversibility, and audience; briefs state the
+  smallest sufficient check; routine records batch small and fast at checkpoints.
+  Scope-setting capture stays first and exact; the producer still does no worker tasks.
