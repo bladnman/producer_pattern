@@ -1,6 +1,6 @@
 # Why the Producer Pattern has this shape
 
-Living design rationale · updated October 18, 2026. This repository authors a
+Living design rationale · updated October 19, 2026. This repository authors a
 candidate pattern; it has not automatically adopted or installed that pattern.
 This document explains the current reasoning, tradeoffs, and revisit triggers.
 It is not an activity log or a claim that every design direction is approved.
@@ -166,20 +166,36 @@ The checked producer retains its `🎬` reply prefix; `📋 SitRep` labels a blo
 inside that reply. Reserve the heading for periodic reports so readers can scan
 or skip them; it is not a prefix for every progress sentence. Cadence, evidence,
 continued supervision, and exit requirements are unchanged.
+**Reported friction, October 19:** Full reports appear too frequently during ordinary
+producer exchanges. The frequency is reported; its cause has not been established.
+**Hypothesis:** Tying report formatting to meaningful changes and stricter host
+timing may encourage a full block on each reply.
+**Accepted refinement, October 19:** A SitRep is a useful periodic overview during
+ongoing supervision, not a default block on every producer reply, worker return,
+or status change. Use ordinary prose for discussion, direct answers, and brief
+progress; communicate meaningful changes promptly. Meaningful ordinary updates
+already satisfy the cadence, so do not append a redundant report. A full overview
+helps after several minutes of otherwise quiet work or when multiple developments
+or workstreams benefit from one combined view. This supersedes interpreting the
+earlier cadence as requiring a full report with each change or host update.
+The five-minute silence limit and stricter host timing remain; stricter timing
+calls for concise progress, not a full report at each interval.
 **Why/tradeoff:** A small vocabulary makes attention needs recognizable. One marker
 can introduce several numbered questions. A checked identity exposes startup truth,
 while its limited meaning avoids implying tested behavior or live execution.
 **Consequence:** [PATTERN.md](../pattern/PATTERN.md) now defines the markers and
-requires compact situation reports while managed work continues: at most five
-minutes of silence, meaningful changes sooner, and stricter host cadence respected.
-Reports cover held work and current action/next proof, using actual observations.
+separates timely progress updates from periodic overviews while managed work
+continues. Reports cover held work and current action/next proof, using actual
+observations.
 They remain intermediate commentary; existing handoff, blockage, and interruption
 boundaries still apply. A Small recorder returns setup facts under
 [STATE.md](../pattern/STATE.md); the producer resolves its actual role. The existing
 [PROJECT](../pattern/PROJECT.md) and [installation](../pattern/INSTALL.md) receipts
 supply the context without a new state engine or runtime requirement for lean or
-an existing tracker. These instructions are implemented in the documents; link and
-package checks do not establish fresh-session behavioral compliance.
+an existing tracker. The cadence refinement is implemented in the contract and
+package/site summaries. Link and package checks do not establish fresh-session
+behavioral compliance; the [manual scenarios](DESIGN_NOTES.md#manual-scenarios-before-adoption-claims)
+remain proposed checks, not executed trials.
 **Regression cases:** A source checkout or inherited worker cannot display producer
 identity. A correctly wired lean installation can pass without the bundled helper.
 With three workstreams, an active export, returned review, and waiting packaging
@@ -187,8 +203,11 @@ all remain visible; the producer evaluates the review and keeps supervising afte
 its report. User questions stay actionable, and a host question tool is not echoed
 as a second question in chat. The heading identifies a periodic report without
 turning ordinary progress sentences into reports or suggesting that saved state
-proves live workers. **Revisit:** real use shows missed attention needs, noisy
-repetition, false setup claims, or supervision ending at a status report.
+proves live workers. Rapid exchanges and worker returns do not each get a full
+block; useful ordinary host updates satisfy timing without duplication. Quiet
+managed work still gets a timed overview, and meaningful changes are communicated
+promptly while supervision continues. **Revisit:** real use shows missed attention
+needs, noisy repetition, false setup claims, or supervision ending at a status report.
 
 ## R10 — Assign roles explicitly; preserve project ownership across entry routes
 
@@ -342,3 +361,10 @@ pointers. Public documentation must stand on its own.
 - Added an optional global pointer skill outside the project payload, preserving
   one canonical lifecycle guide and explicit project adoption.
 - Clarified conservative removal and the independent global-skill/project boundaries.
+
+## Decision history — October 19, 2026
+
+- Refined SitRep frequency around useful periodic overviews, preserving timely
+  ordinary progress, the five-minute silence limit, and stricter host timing.
+- Kept the reported repetition distinct from its hypothesized cause; documentation
+  implements the refinement, while fresh-session behavioral checks remain pending.

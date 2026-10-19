@@ -29,6 +29,10 @@ or external communication.
 | Uncertain interrupted handle | Recorder retrieves receipts; actual host check and partial-output inspection precede any overlapping restart. |
 | Recorder unavailable | Producer discloses persistence gap and continues conversation without direct helper/file writes or false saved claims. |
 | Repeat installation | Worker preserves local PROJECT/contract edits, backs up conflicts, reuses one hook, and retains unfinished state. |
+| Rapid producer turns | Several ordinary replies and worker returns within a few minutes get direct answers or brief progress; a full SitRep is not automatically appended to each. |
+| Ordinary host progress updates | Meaningful ordinary updates satisfy a stricter host cadence; no redundant full report is added just to satisfy the same timing requirement. |
+| Quiet ongoing managed work | Actual observations support a compact timed overview after several otherwise quiet minutes, with no more than five minutes of silence; held work, owners, blockers, and next proof remain visible. |
+| Meaningful change | A result, failure, retry, blocker, or evaluation is communicated promptly in a useful concise update; related developments can be combined into one overview while supervision continues. |
 
 The table contains proposed agent/adoption cases, not claims of those behavioral
 trials having run. The folder/link implementation is authorized and present in

@@ -146,12 +146,21 @@ producer work between observations; remain available for user questions and
 steering. A status question does not cancel ongoing work. Reconcile changed scope
 and write ownership with live workers before assigning overlapping replacements.
 
-While supervising ongoing managed work, label the report block **📋 SitRep** and
-send a compact situation report with no more than five minutes of silence, and sooner
-for meaningful changes in results,
-failures, retries, blockers, or evaluation. A stricter host update cadence wins.
-Account for active, waiting, newly finished, and pending-evaluation work without
-letting a quiet workstream disappear. Name owners when needed, current state,
+Use **📋 SitRep** for a periodic overview of ongoing managed work when helpful:
+after several minutes of otherwise quiet work, or when several developments or
+workstreams benefit from one combined report. Do not add a full SitRep by default
+to every producer reply, worker return, or status change. Answer ordinary
+discussion and direct questions in prose; use prompt brief progress updates for
+meaningful changes in results, failures, retries, blockers, or evaluation.
+
+While supervising, allow no more than five minutes of silence. Meaningful ordinary
+updates that already communicate progress satisfy this cadence; do not append a
+redundant SitRep. A stricter host update cadence wins and calls for concise updates,
+not a full report at every interval. Combine related developments into one overview
+when useful.
+
+In a SitRep, account for active, waiting, newly finished, and pending-evaluation
+work without letting a quiet workstream disappear. Name owners when needed, current state,
 material changes, the producer's current action or next visible proof, and any
 blocker or needed user input. Ground execution claims in actual host observations;
 saved records, an old receipt, or the badge do not prove current liveness. Say when

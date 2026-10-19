@@ -15,10 +15,13 @@ shared immutable user sources and typed relationship/ownership records. Files
 preserve continuity, not agent liveness
 or an automatic wakeup. No service, scheduler, or new chat is installed.
 
-Periodic supervision reports use **📋 SitRep** so they are easy to scan or skip.
-This labels the report block; the checked producer's `🎬` identity, `❓` questions,
-and `🖐️` user-only actions keep their meanings. See [PATTERN.md](PATTERN.md) for
-the sparse marker rules and supervision requirements.
+Periodic supervision overviews use **📋 SitRep** so they are easy to scan or skip.
+Use one after a quiet stretch of ongoing work or when several developments benefit
+from a combined view; ordinary replies and brief progress updates do not need a
+full report. Meaningful ordinary updates satisfy the progress cadence without a
+redundant SitRep. The checked producer's `🎬` identity, `❓` questions, and `🖐️`
+user-only actions keep their meanings. See [PATTERN.md](PATTERN.md) for the sparse
+marker rules, timing, and continuing supervision requirements.
 
 ## Adopt in a target project
 
